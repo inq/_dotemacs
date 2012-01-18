@@ -1,0 +1,38 @@
+(require 'auto-complete)
+(require 'rcodetools)
+(require 'ri-emacs)
+
+
+(defvar ac-source-rcodetools
+  '((init . (lambda ()
+              (condition-case x
+                  (save-excursion
+                    (rct-exec-and-eval rct-complete-command-name "--completion-emacs-icicles"))
+                (error) (setq rct-method-completion-table nil))))
+    (candidates . (lambda ()
+                    (all-completions
+                     ac-target
+                     (mapcar
+                      (lambda (completion)
+                        (replace-regexp-in-string "\t.*$" "" (car completion)))
+                      rct-method-completion-table))))))
+
+(defvar ac-source-ri
+ '((candidates
+    . (lambda ()
+        (all-completions ac-target 'ri-ruby-complete-method) )
+    )) "Source for ruby internal keywords.")
+
+
+(defun ac-ruby ()
+  (interactive)
+  (auto-complete-mode t)
+  (set (make-local-variable 'ac-sources)
+       (append ac-sources ;; '(ac-source-yasnippet)
+	              '(ac-source-rcodetools)
+		             '(ac-source-ri) )  )
+  (set (make-local-variable 'ac-auto-start) nil)
+  (message "ac-ruby loaded") )
+
+
+(provide 'auto-complete-ruby)
