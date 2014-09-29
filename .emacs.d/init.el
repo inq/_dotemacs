@@ -1,8 +1,30 @@
 (windmove-default-keybindings 'meta)
 (define-key global-map [select] 'windmove-up)
 
-(tool-bar-mode -1)
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (replace-regexp-in-string
+                          "[ \t\n]*$"
+                          ""
+                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq eshell-path-env path-from-shell) ; for eshell users
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(when window-system (set-exec-path-from-shell-PATH))
+
+; turn off toolbar
+(if window-system
+    (tool-bar-mode -1))
 (desktop-save-mode 1)
+
+; S
+(add-to-list 'load-path "~/.emacs.d/s")
+
+; AUTO-COMPLETE
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(require 'auto-complete)
+(global-auto-complete-mode t)
+(define-key ac-complete-mode-map "\t" 'ac-expand)
 
 ; DASH
 (add-to-list 'load-path "~/.emacs.d/dash")
@@ -37,11 +59,6 @@
 ;(add-to-list 'load-path "~/.emacs.d/anything")
 ;(require 'anything-config)
 
-; AUTO-COMPLETE
-(add-to-list 'load-path "~/.emacs.d/auto-complete")
-(require 'auto-complete)
-(global-auto-complete-mode t)
-(define-key ac-complete-mode-map "\t" 'ac-expand)
 
 ; RUBY
 (add-to-list 'load-path "~/.emacs.d/ruby/")
