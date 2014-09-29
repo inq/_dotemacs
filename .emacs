@@ -11,11 +11,6 @@
   "Command to kill a compilation launched by `mode-compile'" t)
 (global-set-key "\C-ck" 'mode-compile-kill)
 
-; MATLAB
-
-(add-to-list 'load-path "/home/q/.emacs.d/matlab-emacs")
-(require 'matlab-load)
-
 ; ERLANG
 
 (setq load-path (cons  "/usr/lib64/erlang/lib/tools-2.6.6/emacs"
@@ -25,12 +20,6 @@
 
 (setq erlang-indent-level 2)
 ;(require 'erlang-start)
-
-; RSENSE
-
-(setq rsense-home "~/opt/rsense-0.3")
-(add-to-list 'load-path (concat rsense-home "/etc/"))
-(require 'rsense)
 
 (setq default-input-method "korean-hangul2")
 (setq default-korean-keyboard "2")
@@ -49,14 +38,10 @@
 (define-key ac-complete-mode-map "\t" 'ac-expand)
 
 ; RUBY
-(add-to-list 'load-path "/usr/local/lib64/ruby/gems/1.9.1/gems/rcodetools-0.8.5.0")
 (add-to-list 'load-path "~/.emacs.d/ruby/")
-(require 'rspec-mode)
-;(require 'auto-complete-ruby)
-
 (setq popup-use-optimized-column-computation nil)
 
-
+(add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-install)
 (setq auto-install-directory "~/.emacs.d/auto-install/")
 
@@ -78,8 +63,6 @@
 (mapcar #'(lambda (arg) (apply #'set-face-attribute arg))
         '((default nil :family "Bitstream Vera Sans Mono"
                        :foreground "powder blue" :background "black")
-          (modeline nil :foreground "white" :background "IndianRed4")
-          (modeline-inactive nil :foreground "grey80" :background "gray30")
           (isearch nil :foreground "brown4" :background "palevioletred2")
           (font-lock-comment-face nil :foreground "chocolate1")
           (font-lock-constant-face nil :foreground "Aquamarine")
@@ -134,8 +117,6 @@
 ; RINARI
 (require 'ido)
 (ido-mode t)
-(add-to-list 'load-path "~/.emacs.d/rinari")
-(require 'rinari)
 
 ; CSCOPE
 (add-to-list 'load-path "~/.emacs.d/xcscope")
