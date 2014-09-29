@@ -1,7 +1,36 @@
 (windmove-default-keybindings 'meta)
 (define-key global-map [select] 'windmove-up)
 
+(tool-bar-mode -1)
 (desktop-save-mode 1)
+
+; SCALA
+(setq exec-path (append exec-path (list "/usr/local/Cellar/scala/2.11.2/bin/")))
+(require 'scala-mode-auto)
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(eval-after-load "scala-mode"
+  '(progn
+     (define-key scala-mode-map (kbd "<f9>") 'ensime-builder-build)
+     (define-key scala-mode-map (kbd "<f10>") 'snsime-inf-switch)))
+(eval-after-load "scala-mode"
+  '(progn
+     (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+     (define-key scala-mode-map (kbd "<f9>") 'scala-run)
+     (define-key scala-mode-map (kbd "RET") 'newline-and-indent)))
+
+(defun scala-run ()
+  (interactive)
+  (ensime-sbt-action "run")
+  (ensime-sbt-action "~compile")
+  (let ((c (current-buffer)))
+    (switch-to-buffer-other-window
+     (get-buffer-create (ensime-sbt-build-buffer-name)))
+    (switch-to-buffer-other-window c)))
+
+(setq exec-path
+      (append exec-path (list "/usr/local/Cellar/scala/2.11.2/bin")))
+
 
 ; MODE-COMPILE
 (autoload 'mode-compile "mode-compile"
@@ -11,16 +40,8 @@
   "Command to kill a compilation launched by `mode-compile'" t)
 (global-set-key "\C-ck" 'mode-compile-kill)
 
-; ERLANG
 
-(setq load-path (cons  "/usr/lib64/erlang/lib/tools-2.6.6/emacs"
-		       load-path))
-(setq erlang-root-dir "/usr/lib64/erlang")
-(setq exec-path (cons "/usr/lib64/erlang/bin" exec-path))
-
-(setq erlang-indent-level 2)
-;(require 'erlang-start)
-
+; KOREAN
 (setq default-input-method "korean-hangul2")
 (setq default-korean-keyboard "2")
 
@@ -61,7 +82,7 @@
 (set-face-background 'hl-line "#333")
 
 (mapcar #'(lambda (arg) (apply #'set-face-attribute arg))
-        '((default nil :family "Bitstream Vera Sans Mono"
+        '((default nil :family "Monaco"
                        :foreground "powder blue" :background "black")
           (isearch nil :foreground "brown4" :background "palevioletred2")
           (font-lock-comment-face nil :foreground "chocolate1")
