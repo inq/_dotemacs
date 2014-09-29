@@ -4,33 +4,18 @@
 (tool-bar-mode -1)
 (desktop-save-mode 1)
 
+; DASH
+(add-to-list 'load-path "~/.emacs.d/dash")
+
 ; SCALA
-(setq exec-path (append exec-path (list "/usr/local/Cellar/scala/2.11.2/bin/")))
-(require 'scala-mode-auto)
+
+(add-to-list 'load-path "~/.emacs.d/scala-mode2")
+(require 'scala-mode2)
+(add-to-list 'load-path "~/.emacs.d/sbt-mode")
+(require 'sbt-mode)
+(add-to-list 'load-path "~/.emacs.d/ensime-emacs")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-(eval-after-load "scala-mode"
-  '(progn
-     (define-key scala-mode-map (kbd "<f9>") 'ensime-builder-build)
-     (define-key scala-mode-map (kbd "<f10>") 'snsime-inf-switch)))
-(eval-after-load "scala-mode"
-  '(progn
-     (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-     (define-key scala-mode-map (kbd "<f9>") 'scala-run)
-     (define-key scala-mode-map (kbd "RET") 'newline-and-indent)))
-
-(defun scala-run ()
-  (interactive)
-  (ensime-sbt-action "run")
-  (ensime-sbt-action "~compile")
-  (let ((c (current-buffer)))
-    (switch-to-buffer-other-window
-     (get-buffer-create (ensime-sbt-build-buffer-name)))
-    (switch-to-buffer-other-window c)))
-
-(setq exec-path
-      (append exec-path (list "/usr/local/Cellar/scala/2.11.2/bin")))
-
 
 ; MODE-COMPILE
 (autoload 'mode-compile "mode-compile"
