@@ -12,6 +12,12 @@
 
 (when window-system (set-exec-path-from-shell-PATH))
 
+; YASNIPPET
+(add-to-list 'load-path "~/.emacs.d/yasnippet/")
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
 ; turn off toolbar
 (if window-system
     (tool-bar-mode -1))
@@ -34,16 +40,6 @@
 ; DASH
 (add-to-list 'load-path "~/.emacs.d/dash")
 
-; SCALA
-
-(add-to-list 'load-path "~/.emacs.d/scala-mode2")
-(require 'scala-mode2)
-(add-to-list 'load-path "~/.emacs.d/sbt-mode")
-(require 'sbt-mode)
-(add-to-list 'load-path "~/.emacs.d/ensime-emacs")
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-
 ; MODE-COMPILE
 (autoload 'mode-compile "mode-compile"
   "Command to compile current buffer file based on the major mode" t)
@@ -57,7 +53,7 @@
 (setq default-input-method "korean-hangul2")
 (setq default-korean-keyboard "2")
 
-(add-to-list 'load-path "/home/q/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/")
 
 
 ; ANYTHING
@@ -108,11 +104,7 @@
 (setq linum-format "%4d ")
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 
-; YASNIPPET
-(add-to-list 'load-path "~/.emacs.d/yasnippet/")
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/yasnippet/snippets")
+
 
 ; XSCHEME
 (require 'xscheme)
