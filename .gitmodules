@@ -18,4 +18,4 @@
 	url = https://github.com/magnars/s.el.git
 [submodule ".emacs.d/haskell-mode"]
 	path = .emacs.d/haskell-mode
-	url = https://github.com/haskell/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
