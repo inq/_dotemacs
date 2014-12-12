@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/etc")
+
 (windmove-default-keybindings 'meta)
 (define-key global-map [select] 'windmove-up)
 
@@ -53,9 +55,6 @@
 (setq default-input-method "korean-hangul2")
 (setq default-korean-keyboard "2")
 
-(add-to-list 'load-path "~/.emacs.d/")
-
-
 ; ANYTHING
 ;(add-to-list 'load-path "~/.emacs.d/anything")
 ;(require 'anything-config)
@@ -65,9 +64,8 @@
 (add-to-list 'load-path "~/.emacs.d/ruby/")
 (setq popup-use-optimized-column-computation nil)
 
-(add-to-list 'load-path "~/.emacs.d/")
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
+;(require 'auto-install)
+;(setq auto-install-directory "~/.emacs.d/auto-install/")
 
 
 (defun ruby-rcodetools-and-ri-and-auto-complete ()
