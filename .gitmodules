@@ -1,3 +1,6 @@
+[submodule ".emacs.d/yasnippet"]
+	path = .emacs.d/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
 [submodule ".emacs.d/scala-mode2"]
 	path = .emacs.d/scala-mode2
 	url = https://github.com/hvesalai/scala-mode2.git
