@@ -23,12 +23,12 @@
 ; turn off toolbar
 (if window-system
     (tool-bar-mode -1))
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 ; HASKELL
-(add-to-list 'load-path "~/.emacs.d/haskell-mode/")
-(require 'haskell-mode-autoloads)
-(add-to-list 'Info-default-directory-list "~/.emacs.d/haskell-mode/")
+;(add-to-list 'load-path "~/.emacs.d/haskell-mode/")
+;(require 'haskell-mode-autoloads)
+;(add-to-list 'Info-default-directory-list "~/.emacs.d/haskell-mode/")
 
 ; S
 (add-to-list 'load-path "~/.emacs.d/s")
