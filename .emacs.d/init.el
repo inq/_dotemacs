@@ -38,5 +38,6 @@
 	            (font-lock-keyword-face nil :foreground "Cyan1")))
 
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 (global-flycheck-mode)
