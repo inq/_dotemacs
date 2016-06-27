@@ -6,6 +6,7 @@
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
+(add-hook 'haskell-mode-hook #'company-mode)
 (setq racer-cmd "~/.cargo/bin/racer")
 (setq racer-rust-src-path "~/dev/rustc-1.8.0/src/")
 
@@ -41,3 +42,5 @@
 (setq auto-save-default nil)
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 (global-flycheck-mode)
+
+(add-to-list 'company-backends 'company-ghc)
