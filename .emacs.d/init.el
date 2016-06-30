@@ -1,3 +1,4 @@
+;;; Code: init.el
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
@@ -43,4 +44,12 @@
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 (global-flycheck-mode)
 
-(add-to-list 'company-backends 'company-ghc)
+
+(setq indent-tabs-mode nil)
+(setq python-indent-offset 2)
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (setq tab-width 2)
+	    (setq python-indent 2)))
+
+;(add-to-list 'company-backends 'company-ghc)
