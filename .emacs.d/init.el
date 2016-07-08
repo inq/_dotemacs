@@ -49,6 +49,7 @@
 (setq python-indent-offset 2)
 (add-hook 'python-mode-hook
           (lambda ()
+            (fci-mode)
             (setq tab-width 2)
             (setq python-indent 2)))
 
@@ -67,15 +68,29 @@
       (goto-char (point-max))
       (delete-blank-lines)
       (let ((trailnewlines (abs (skip-chars-backward "\n\t"))))
-        (if (> trailnewlines 0)
+        (if (> trailnewlines 1)
             (progn
               (delete-char trailnewlines)))))))
-(add-hook 'before-save-hook 'delete-trailing-blank-lines)
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-blank-lines)
+
+(add-hook 'change-major-mode-hook
+          (lambda ()
+            (add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
+            (add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)))
+
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (when (or (eq major-mode 'text-mode) (eq major-mode 'eshell-mode) (string-prefix-p "*" (buffer-name)))
+              (remove-hook 'font-lock-mode-hook 'hc-highlight-tabs)
+              (remove-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
+              (hc-dont-highlight-tabs)
+              (hc-dont-highlight-trailing-whitespace)))
+          'APPEND)
 
 (require 'highlight-chars)
-(add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
-(add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
+(require 'fill-column-indicator)
 
 ;(providd 'init)
 ;;; init.el ends here
