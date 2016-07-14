@@ -94,3 +94,10 @@
 
 ;(providd 'init)
 ;;; init.el ends here
+
+(require 'magit-gerrit)
+(setq-default magit-gerrit-remote "gerrit")
+(setq-default magit-gerrit-ssh-creds "inkyu@prestolabs.io")
+
+;; MAGIT
+(global-set-key (kbd "C-c m") 'magit-status)
