@@ -101,3 +101,5 @@
 
 ;; MAGIT
 (global-set-key (kbd "C-c m") 'magit-status)
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
