@@ -1,0 +1,56 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "dce_rb.json"
+      :pointmax 2501
+      :fsize 2500
+      :lastmodtime '(22693 30220 552663 776000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "dce_i.json"
+      :pointmax 2243
+      :fsize 2242
+      :lastmodtime '(22709 8204 676229 444000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "china_dce_i_only.json"
+      :pointmax 366
+      :fsize 365
+      :lastmodtime '(22709 19097 58555 132000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "dce_j.json"
+      :pointmax 158
+      :fsize 157
+      :lastmodtime '(22709 16266 999683 152000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "china_dce_rb_only.json"
+      :pointmax 361
+      :fsize 360
+      :lastmodtime '(22694 33504 105451 963000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "subscr.json"
+      :pointmax 526
+      :fsize 525
+      :lastmodtime '(22709 38464 946522 603000)
+      :unmatched-syntax nil))
+  :file "!home!inkyu!dev!t!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

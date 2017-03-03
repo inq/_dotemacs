@@ -1,0 +1,441 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("presto/feed_subscriber/proto_feed_reader.h" include nil nil [62 115])
+            ("string" include (:system-flag t) nil [117 134])
+            ("vector" include (:system-flag t) nil [135 152])
+            ("algorithm" include (:system-flag t) nil [153 173])
+            ("set" include (:system-flag t) nil [174 188])
+            ("utility" include (:system-flag t) nil [189 207])
+            ("base/flags.h" include nil nil [209 232])
+            ("base/logging.h" include nil nil [233 258])
+            ("base/file_util.h" include nil nil [259 286])
+            ("base/file_path.h" include nil nil [287 314])
+            ("base/date.h" include nil nil [315 337])
+            ("base/string_split.h" include nil nil [338 368])
+            ("base/string_util.h" include nil nil [369 398])
+            ("base/string_number_conversions.h" include nil nil [399 442])
+            ("presto/product_info/product_info_manager.h" include nil nil [444 497])
+            ("presto/common/feed_message_storage.h" include nil nil [498 545])
+            ("presto/common/proto/feed.pb.h" include nil nil [547 587])
+            ("presto/feed_subscriber/proto_field_copy.h" include nil nil [588 640])
+            ("presto/util/product_util.h" include nil nil [641 678])
+            ("presto/util/repository_location_resolver.h" include nil nil [679 732])
+            ("presto" type
+               (:members 
+                  ( ("feed_subscriber" type
+                       (:members 
+                          ( ("file_util::FileEnumerator" variable (:type "int") (reparse-symbol namespacesubparts) [790 816])
+                            ("presto::util::RepositoryLocationResolver" variable (:type "int") (reparse-symbol namespacesubparts) [825 866])
+                            ("presto::product_info::ProductInfo" variable (:type "int") (reparse-symbol namespacesubparts) [875 909])
+                            ("presto::product_info::ProductInfoManager" variable (:type "int") (reparse-symbol namespacesubparts) [918 959])
+                            ("unnamed" type
+                               (:members 
+                                  ( ("TimeFilePathComparator" type
+                                       (:members 
+                                          ( ("ElemType" type
+                                               (:typedef ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("Time" type nil nil nil)
+                                                          ("FilePath" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1092 1135])
+                                            ("()" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("a" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ElemType" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1154 1172])
+                                                    ("b" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ElemType" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1173 1191]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1138 1229]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1058 1232])
+                                    ("GetFirstExistingPath" function
+                                       (:arguments 
+                                          ( ("dirs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("FilePath" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1298 1332])
+                                            ("out" variable
+                                               (:pointer 1
+                                                :type ("FilePath" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1333 1347]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [1267 1504]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [961 1506])
+                            ("ProtoFeedReader" function
+                               (:constructor-flag t
+                                :parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("file" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FilePath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1555 1576]))                                  
+                                :type ("ProtoFeedReader" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1522 1965])
+                            ("UpdateTradeFeed" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ArchiveFeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2010 2044]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1967 2447])
+                            ("UpdateBookFeed" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ArchiveFeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2491 2525]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2449 4359])
+                            ("UpdateStatusFeed" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ArchiveFeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4405 4439]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4361 4677])
+                            ("LoadHeader" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("archive_feed" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ArchiveFeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4712 4751]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4679 6306])
+                            ("LoadFeed" function
+                               (:parent "ProtoFeedReader"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [6308 8032])
+                            ("Read" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("feed" variable
+                                       (:pointer 1
+                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8060 8078]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [8034 8297])
+                            ("Read" function
+                               (:pointer 1
+                                :parent "ProtoFeedReader"
+                                :constant-flag t
+                                :arguments 
+                                  ( ("error" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [8340 8351]))                                  
+                                :type ("FeedMessage" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [8299 8571])
+                            ("ReadAndNew" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("error" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [8625 8636]))                                  
+                                :type ("unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("FeedMessage" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [8573 9352])
+                            ("Peek" function
+                               (:pointer 1
+                                :parent "ProtoFeedReader"
+                                :constant-flag t
+                                :arguments 
+                                  ( ("error" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [9395 9406]))                                  
+                                :type ("FeedMessage" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9354 9604])
+                            ("Peek" function
+                               (:parent "ProtoFeedReader"
+                                :arguments 
+                                  ( ("feed" variable
+                                       (:pointer 1
+                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9632 9650]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [9606 9847])
+                            ("ProtoFeedReaderFactory" function
+                               (:constructor-flag t
+                                :parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("file" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FilePath" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9901 9922]))                                  
+                                :type ("ProtoFeedReaderFactory" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9849 10025])
+                            ("GetFileBundle" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10075 10097])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10102 10112])
+                                    ("product_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10117 10149])
+                                    ("file_bundle" variable
+                                       (:pointer 1
+                                        :type ("FileBundle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10154 10178]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [10027 11413])
+                            ("CreateFactory" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11493 11515])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11520 11530])
+                                    ("product_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11535 11567])
+                                    ("session_idx" variable (:type "int") (reparse-symbol arg-sub-list) [11572 11588]))                                  
+                                :type ("unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("ProtoFeedReaderFactory" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [11415 12073])
+                            ("AppendFactoriesImpl" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12129 12151])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12156 12166])
+                                    ("product_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12171 12203])
+                                    ("session_idx_vector" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12208 12251])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12256 12275]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [12075 13147])
+                            ("CreateFactoriesImpl" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13203 13225])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13230 13240])
+                                    ("product_names" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13245 13291])
+                                    ("session_idx" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13296 13332])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13337 13356]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [13149 14088])
+                            ("CreateFactories" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14140 14162])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14167 14177])
+                                    ("product_names" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14182 14228])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14233 14252]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14090 14338])
+                            ("CreateFactories" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14390 14412])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14417 14427])
+                                    ("product_names" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14432 14478])
+                                    ("session_idx" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14483 14519])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14524 14543]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14340 14634])
+                            ("GetTickersFromProductGroups" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14698 14720])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14725 14735])
+                                    ("product_groups" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14740 14787])
+                                    ("main_product_only" variable (:type "bool") (reparse-symbol arg-sub-list) [14792 14815])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14820 14850]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14636 15900])
+                            ("CreateFactoriesByProductGroup" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15968 15990])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15997 16007])
+                                    ("product_groups" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16014 16061])
+                                    ("main_product_only" variable (:type "bool") (reparse-symbol arg-sub-list) [16068 16091])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16098 16117]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [15902 16386])
+                            ("CreateFactoriesByProductGroup" function
+                               (:parent "ProtoFeedReaderFactory"
+                                :arguments 
+                                  ( ("exchange" variable (:type ("ExchangeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16452 16474])
+                                    ("date" variable (:type ("Date" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16479 16489])
+                                    ("product_groups" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16494 16541])
+                                    ("main_product_only" variable (:type "bool") (reparse-symbol arg-sub-list) [16546 16569])
+                                    ("session_idx" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16574 16610])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("FactoryVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16615 16634]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [16388 16908])
+                            ("New" function
+                               (:pointer 1
+                                :parent "ProtoFeedReaderFactory"
+                                :type ("ProtoFeedReader" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [16910 17054]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [753 17057]))                  
+                :type "namespace")
+                nil [734 17089]))          
+      :file "proto_feed_reader.cc"
+      :pointmax 17111
+      :fsize 17109
+      :lastmodtime '(22689 62554 383721 659000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "proto_feed_reader.h"
+      :fsize 4122
+      :lastmodtime '(22689 13561 842555 379000))
+    (semanticdb-table "semanticdb-table"
+      :file "proto_field_copy.h"
+      :fsize 966
+      :lastmodtime '(22689 13561 843555 356000)))
+  :file "!home!inkyu!quant!navi!presto!feed_subscriber!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

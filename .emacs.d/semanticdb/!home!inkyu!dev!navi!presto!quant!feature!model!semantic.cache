@@ -1,0 +1,441 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("base/logging.h" include nil nil [63 88])
+            ("presto/quant/feature/feature.h" include nil nil [90 131])
+            ("presto/math/moving_average.h" include nil nil [132 171])
+            ("util::json::DictionaryValue" variable (:type "int") nil [181 209])
+            ("presto" type
+               (:members 
+                  ( ("quant" type
+                       (:members 
+                          ( ("feature" type
+                               (:members 
+                                  ( ("DiffCross" type
+                                       (:superclasses 
+                                          ( ("Feature" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [305 312])
+                                            ("Column" type
+                                               (:members 
+                                                  ( ("VALID" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [333 339])
+                                                    ("TIME_DIFF_MID_1" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [344 360])
+                                                    ("TIME_DIFF_MID_2" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [365 381])
+                                                    ("DIFF_CROSS_MID" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [386 401])
+                                                    ("DIFF_VWAP_1" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [406 418])
+                                                    ("MID_TO_TRADE_1" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [423 438])
+                                                    ("NUM_OF_COLUMN" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [443 457]))                                                  
+                                                :type "enum")
+                                                (reparse-symbol classsubparts) [315 462])
+                                            ("Initialize" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("dict" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("DictionaryValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [514 542])
+                                                    ("deps" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("FeatureAggregator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [549 579]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [483 2043])
+                                            ("HandleFeed" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("symbol" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("Symbol" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2071 2092])
+                                                    ("feed" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2093 2117]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2047 4896])
+                                            ("private" label nil (reparse-symbol classsubparts) [4899 4907])
+                                            ("last_target1_book_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4910 4935])
+                                            ("last_target2_book_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4938 4963])
+                                            ("target1_ask_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4966 4985])
+                                            ("target1_bid_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4988 5007])
+                                            ("target2_ask_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5010 5029])
+                                            ("target2_bid_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5032 5051])
+                                            ("last_trade_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5054 5078])
+                                            ("diff_window_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5081 5100])
+                                            ("midp1_window_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5103 5155])
+                                            ("midp2_window_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5158 5210])
+                                            ("diff_window_ask_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5213 5268])
+                                            ("diff_window_bid_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5271 5326])
+                                            ("pq1_window_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5329 5379])
+                                            ("qty1_window_" variable (:type ("math::TimeWindowMovingAverage" type
+                                                 (:template-specifier 
+                                                    ( ("double" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5382 5433])
+                                            ("target1_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Symbol" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5436 5459])
+                                            ("target2_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Symbol" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5462 5485]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [269 5488])
+                                    ("REGISTER_FEATURE" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("DiffCross" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5526 5536]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [5509 5537]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [248 5540]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [230 5564]))                  
+                :type "namespace")
+                nil [211 5586]))          
+      :file "diff_cross.cc"
+      :pointmax 5608
+      :fsize 5601
+      :lastmodtime '(22702 50377 283955 483000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("base/logging.h" include nil nil [61 86])
+            ("base/string_number_conversions.h" include nil nil [87 130])
+            ("presto/quant/feature/feature.h" include nil nil [132 173])
+            ("util::json::DictionaryValue" using (:type ("util::json::DictionaryValue" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [175 209])
+            ("presto" type
+               (:members 
+                  ( ("quant" type
+                       (:members 
+                          ( ("feature" type
+                               (:members 
+                                  ( ("Constant" type
+                                       (:superclasses 
+                                          ( ("Feature" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [304 311])
+                                            ("Initialize" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("config" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("DictionaryValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [345 375])
+                                                    ("deps" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("FeatureAggregator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [382 412]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [314 924])
+                                            ("HandleFeed" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("symbol" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("Symbol" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [952 973])
+                                                    ("feed" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [974 998]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [928 1001])
+                                            ("protected" label nil (reparse-symbol classsubparts) [1004 1014]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [269 1017])
+                                    ("REGISTER_FEATURE" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("Constant" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1064]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [1038 1065]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [248 1068]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [230 1092]))                  
+                :type "namespace")
+                nil [211 1114]))          
+      :file "constant.cc"
+      :pointmax 1136
+      :fsize 1135
+      :lastmodtime '(22689 13561 945552 993000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "china_level5_window.json"
+      :pointmax 3820
+      :fsize 3819
+      :lastmodtime '(22689 13220 290463 473000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "diff_cross.json"
+      :pointmax 203
+      :fsize 202
+      :lastmodtime '(22689 13220 295463 357000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("base/logging.h" include nil nil [61 86])
+            ("presto/common/proto/feed.pb.h" include nil nil [88 128])
+            ("presto/quant/feature/feature.h" include nil nil [129 170])
+            ("presto/quant/feature/util/level_book.h" include nil nil [171 220])
+            ("presto/product_info/product_info.h" include nil nil [221 266])
+            ("presto" type
+               (:members 
+                  ( ("quant" type
+                       (:members 
+                          ( ("feature" type
+                               (:members 
+                                  ( ("util::json::DictionaryValue" variable (:type "int") (reparse-symbol namespacesubparts) [334 362])
+                                    ("FlipEvent2" type
+                                       (:superclasses 
+                                          ( ("Feature" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [401 408])
+                                            ("Column" type
+                                               (:typedef ("" type
+                                                     (:members 
+                                                        ( ("BID_UP_EVENT" variable
+                                                             (:constant-flag t
+                                                              :default-value (445 446)
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [430 446])
+                                                          ("BOOK_AFTER_BID_UP" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [452 470])
+                                                          ("BUY_AFTER_BID_UP" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [475 492])
+                                                          ("SELL_AFTER_BID_UP" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [497 515])
+                                                          ("ASK_DOWN_EVENT" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [520 535])
+                                                          ("BOOK_AFTER_ASK_DOWN" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [540 560])
+                                                          ("BUY_AFTER_ASK_DOWN" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [565 584])
+                                                          ("SELL_AFTER_ASK_DOWN" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [589 609])
+                                                          ("IS_LIGHT_FLIP" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [614 628])
+                                                          ("FLIP_ID" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [633 641])
+                                                          ("FLIP_MSG_CNT" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [646 659])
+                                                          ("NUM_COLUMN" variable
+                                                             (:constant-flag t
+                                                              :type "int")
+                                                              (reparse-symbol enumsubparts) [664 675]))                                                        
+                                                      :type "enum")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [411 687])
+                                            ("Initialize" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("dict" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("DictionaryValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [722 750])
+                                                    ("deps" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("FeatureAggregator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [757 787]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [691 2128])
+                                            ("TriggerBidValue" function
+                                               (:arguments 
+                                                  ( ("flag" variable
+                                                       (:pointer 1
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [2153 2164])
+                                                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [2165 2173]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2132 2333])
+                                            ("TriggerAskValue" function
+                                               (:arguments 
+                                                  ( ("flag" variable
+                                                       (:pointer 1
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [2358 2369])
+                                                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [2370 2378]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2337 2540])
+                                            ("InitEventValue" function (:type "void") (reparse-symbol classsubparts) [2544 2855])
+                                            ("ProcessBook" function
+                                               (:arguments 
+                                                  ( ("book" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2876 2900]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2859 5073])
+                                            ("ProcessTrade" function
+                                               (:arguments 
+                                                  ( ("trade" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5095 5120]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5077 5765])
+                                            ("HandleFeed" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("symbol" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("Symbol" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5793 5814])
+                                                    ("feed" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5815 5839]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5769 6126])
+                                            ("protected" label nil (reparse-symbol classsubparts) [6129 6139])
+                                            ("target_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Symbol" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6142 6164])
+                                            ("ask0_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6167 6185])
+                                            ("bid0_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6188 6206])
+                                            ("no_gap_ask0_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6209 6234])
+                                            ("no_gap_bid0_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6237 6262])
+                                            ("flip_count_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6265 6283])
+                                            ("flip_msg_count_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6286 6308])
+                                            ("min_trade_qty_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6311 6332])
+                                            ("bid_up_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6336 6356])
+                                            ("bid_up_for_book_" variable (:type "bool") (reparse-symbol classsubparts) [6359 6381])
+                                            ("bid_up_for_buy_" variable (:type "bool") (reparse-symbol classsubparts) [6384 6405])
+                                            ("bid_up_for_sell_" variable (:type "bool") (reparse-symbol classsubparts) [6408 6430])
+                                            ("ask_down_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6434 6456])
+                                            ("ask_down_for_book_" variable (:type "bool") (reparse-symbol classsubparts) [6459 6483])
+                                            ("ask_down_for_buy_" variable (:type "bool") (reparse-symbol classsubparts) [6486 6509])
+                                            ("ask_down_for_sell_" variable (:type "bool") (reparse-symbol classsubparts) [6512 6536])
+                                            ("valid_" variable (:type "bool") (reparse-symbol classsubparts) [6540 6552])
+                                            ("prod_info_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("presto::product_info::ProductInfo" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6555 6607]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [364 6610])
+                                    ("REGISTER_FEATURE" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("FlipEvent2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6649 6660]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [6632 6661]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [305 6664]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [287 6688]))                  
+                :type "namespace")
+                nil [268 6710]))          
+      :file "flip_event2.cc"
+      :pointmax 6732
+      :fsize 6731
+      :lastmodtime '(22689 13220 297463 311000)
+      :unmatched-syntax '((punctuation 333 . 334) (punctuation 332 . 333) (USING 326 . 331))))
+  :file "!home!inkyu!dev!navi!presto!quant!feature!model!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

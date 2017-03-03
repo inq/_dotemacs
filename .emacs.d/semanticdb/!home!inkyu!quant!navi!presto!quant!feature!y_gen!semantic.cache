@@ -1,0 +1,268 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [61 78])
+            ("presto/common/symbol.h" include nil nil [80 113])
+            ("presto/quant/feature/y_generator.h" include nil nil [114 159])
+            ("presto/product_info/product_info.h" include nil nil [160 205])
+            ("presto" type
+               (:members 
+                  ( ("quant" type
+                       (:members 
+                          ( ("feature" type
+                               (:members 
+                                  ( ("FollowAggressor" type
+                                       (:superclasses 
+                                          ( ("YGenerator" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [310 317])
+                                            ("Column" type
+                                               (:members 
+                                                  ( ("VALID" variable
+                                                       (:constant-flag t
+                                                        :default-value (346 347)
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [338 347])
+                                                    ("SUCCESSFUL" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [353 364])
+                                                    ("IS_BUY" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [369 376])
+                                                    ("QTY" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [381 385])
+                                                    ("DECISION_TIME_MS" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [390 407])
+                                                    ("NUM_OF_COLUMNS" variable
+                                                       (:constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [412 427]))                                                  
+                                                :type "enum")
+                                                (reparse-symbol classsubparts) [320 432])
+                                            ("FollowAggressor" function
+                                               (:constructor-flag t
+                                                :type ("FollowAggressor" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [436 457])
+                                            ("FollowAggressor" function
+                                               (:destructor-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [460 490])
+                                            ("Initialize" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("config" variable
+                                                       (:reference 1
+                                                        :type ("util::json::DictionaryValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [526 562])
+                                                    ("all" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("FeatureAggregator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [589 618]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [494 1265])
+                                            ("HandleFeed" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("symbol" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("Symbol" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1293 1314])
+                                                    ("feed" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1315 1339]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1269 2569])
+                                            ("GenerateY" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("symbol" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("Symbol" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2596 2617])
+                                                    ("feed" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FeedMessage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2643 2667])
+                                                    ("req_id" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2693 2706]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2573 3354])
+                                            ("HandlePendingRow" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("req_id" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3388 3401])
+                                                    ("code" variable (:type ("PendingRowReason" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3402 3424]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3358 3481])
+                                            ("private" label nil (reparse-symbol classsubparts) [3484 3492])
+                                            ("TradePair_t" type
+                                               (:members 
+                                                  ( ("TradePair_t" function
+                                                       (:constructor-flag t
+                                                        :type ("TradePair_t" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [3561 3613])
+                                                    ("time" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3619 3630])
+                                                    ("qty" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3635 3645])
+                                                    ("req_id" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3650 3663]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3536 3668])
+                                            ("TradeOnTrack" type
+                                               (:members 
+                                                  ( ("TradeOnTrack" function
+                                                       (:constructor-flag t
+                                                        :type ("TradeOnTrack" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [3784 3815])
+                                                    ("price" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3821 3833])
+                                                    ("trades" variable (:type ("std::vector" type
+                                                         (:template-specifier 
+                                                            ( ("TradePair_t" type nil nil nil))                                                            
+                                                          :type "class")
+                                                          nil nil)) (reparse-symbol classsubparts) [3838 3870]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3758 3875])
+                                            ("Flush" function
+                                               (:arguments 
+                                                  ( ("trades" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("TradePair_t" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [3914 3953])
+                                                    ("current_time" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3967 3986])
+                                                    ("successful" variable (:type "double") (reparse-symbol arg-sub-list) [4000 4018])
+                                                    ("is_buy" variable (:type "double") (reparse-symbol arg-sub-list) [4032 4046]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3903 4431])
+                                            ("EmitRange" function
+                                               (:arguments 
+                                                  ( ("ladder" variable
+                                                       (:pointer 1
+                                                        :type ("std::deque" type
+                                                             (:template-specifier 
+                                                                ( ("TradeOnTrack" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [4510 4543])
+                                                    ("successful" variable (:type "bool") (reparse-symbol arg-sub-list) [4550 4566])
+                                                    ("is_buy" variable (:type "bool") (reparse-symbol arg-sub-list) [4573 4585])
+                                                    ("direction_forward" variable (:type "bool") (reparse-symbol arg-sub-list) [4592 4615])
+                                                    ("price_cutoff" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4622 4641])
+                                                    ("current_time" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4648 4667]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4488 5220])
+                                            ("InsertTradeEvent" function
+                                               (:arguments 
+                                                  ( ("ladder" variable
+                                                       (:pointer 1
+                                                        :type ("std::deque" type
+                                                             (:template-specifier 
+                                                                ( ("TradeOnTrack" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [5253 5286])
+                                                    ("trade_event" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("TradePair_t" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5293 5324])
+                                                    ("price" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5325 5337]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5224 6255])
+                                            ("RemoveUnusedLevels" function
+                                               (:arguments 
+                                                  ( ("ladder" variable
+                                                       (:pointer 1
+                                                        :type ("std::deque" type
+                                                             (:template-specifier 
+                                                                ( ("TradeOnTrack" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [6283 6316]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6259 6549])
+                                            ("CheckCompact" function
+                                               (:arguments 
+                                                  ( ("ladder" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::deque" type
+                                                             (:template-specifier 
+                                                                ( ("TradeOnTrack" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [6571 6610]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [6553 6998])
+                                            ("target_symbol_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Symbol" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [7022 7051])
+                                            ("prod_info_" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("presto::product_info::ProductInfo" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [7054 7106])
+                                            ("first_book_" variable (:type "bool") (reparse-symbol classsubparts) [7135 7152])
+                                            ("bid_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7155 7172])
+                                            ("ask_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7175 7192])
+                                            ("trade_occurred_" variable (:type "bool") (reparse-symbol classsubparts) [7224 7245])
+                                            ("is_buy_trade_" variable (:type "bool") (reparse-symbol classsubparts) [7248 7267])
+                                            ("trade_time_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7270 7288])
+                                            ("trade_price_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7291 7310])
+                                            ("trade_qty_" variable (:type ("int64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7313 7330])
+                                            ("ladder_buy_" variable (:type ("std::deque" type
+                                                 (:template-specifier 
+                                                    ( ("TradeOnTrack" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [7472 7509])
+                                            ("ladder_sell_" variable (:type ("std::deque" type
+                                                 (:template-specifier 
+                                                    ( ("TradeOnTrack" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [7512 7550]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [265 7553])
+                                    ("REGISTER_Y_GENERATOR" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("AggressorEvaluator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7622 7641]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [7601 7642]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [244 7645]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [226 7669]))                  
+                :type "namespace")
+                nil [207 7691]))          
+      :file "follow_aggressor.cc"
+      :pointmax 7713
+      :fsize 7712
+      :lastmodtime '(22698 17908 87554 516000)
+      :unmatched-syntax nil))
+  :file "!home!inkyu!quant!navi!presto!quant!feature!y_gen!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
