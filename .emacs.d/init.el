@@ -40,6 +40,15 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+;; RUST
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+(setq racer-cmd "~/.cargo/bin/racer") ;; Rustup binaries PATH
+;(setq racer-rust-src-path "~/Code/rust/src") ;; Rust source code PATH
+
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,7 +56,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
+    (flycheck-rust cargo fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
