@@ -45,6 +45,12 @@
 (setq racer-cmd "~/.cargo/bin/racer") ;; Rustup binaries PATH
 ;(setq racer-rust-src-path "~/Code/rust/src") ;; Rust source code PATH
 
+;; COLUMN INDICATOR
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(setq fci-rule-character-color "darkgrey")
+(setq fci-rule-character ?┃)
+(global-fci-mode 1)
+
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 (add-hook 'racer-mode-hook #'company-mode)
