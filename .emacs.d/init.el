@@ -3,6 +3,7 @@
 	     '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+;; YASNIPPET
 ;; SEMANTIC
 (require 'cc-mode)
 (require 'semantic)
@@ -32,6 +33,7 @@
 (require 'helm-config)
 (require 'rtags-helm)
 (setq rtags-use-helm t)
+(setq rtags-display-result-backend 'helm)
 
 ;; NLINUM
 (global-nlinum-mode)
@@ -48,6 +50,7 @@
 ;; COLUMN INDICATOR
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (setq fci-rule-character-color "darkgrey")
+(setq fci-rule-column 80)
 (setq fci-rule-character ?┃)
 (global-fci-mode 1)
 
@@ -62,7 +65,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-rust cargo fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
+    (typescript-mode flycheck-rust cargo fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
