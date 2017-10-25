@@ -1,3 +1,6 @@
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2) 
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
@@ -65,7 +68,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (typescript-mode flycheck-rust cargo fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
+    (web-mode typescript-mode flycheck-rust cargo fill-column-indicator google-c-style protobuf-mode csv-mode haskell-mode racer rust-mode nlinum helm rtags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
