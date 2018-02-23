@@ -29,3 +29,34 @@
 (setq fci-rule-character ?┃)
 (global-fci-mode 1)
 
+;; HELM
+(require 'helm-config)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+
+(require 'helm-fuzzier)
+(helm-fuzzier-mode 1)
+
+(setq-default helm-mode-fuzzy-match t)
+(setq-default helm-M-x-fuzzy-match t)
+(setq-default helm-completion-in-region-fuzzy-match t)
+
+(require 'helm-fuzzy-find)
+(global-set-key (kbd "C-x C-f") #'helm-fuzzy-find)
+
+(helm-mode 1)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
