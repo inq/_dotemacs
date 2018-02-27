@@ -41,10 +41,11 @@
 (setq-default helm-M-x-fuzzy-match t)
 (setq-default helm-completion-in-region-fuzzy-match t)
 
-(require 'helm-fuzzy-find)
-(global-set-key (kbd "C-x C-f") #'helm-fuzzy-find)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 (helm-mode 1)
+
+(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
