@@ -6,6 +6,9 @@
 	     '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+;; PYTHON
+(elpy-enable)
+
 ;; YASNIPPET
 ;; SEMANTIC
 (require 'cc-mode)
@@ -54,7 +57,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
+    (elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
