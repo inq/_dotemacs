@@ -44,7 +44,7 @@
 (setq-default helm-M-x-fuzzy-match t)
 (setq-default helm-completion-in-region-fuzzy-match t)
 
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-x C-f") #'fiplr-find-file)
 
 (helm-mode 1)
 
@@ -57,7 +57,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
+    (fiplr elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
