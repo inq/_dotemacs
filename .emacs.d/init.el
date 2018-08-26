@@ -28,7 +28,7 @@
 ;; COLUMN INDICATOR
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (setq fci-rule-character-color "darkgrey")
-(setq fci-rule-column 80)
+(setq fci-rule-column 100)
 (setq fci-rule-character ?┃)
 (global-fci-mode 1)
 
@@ -46,6 +46,9 @@
 
 (global-set-key (kbd "C-x C-f") #'fiplr-find-file)
 
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "venv"))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
+
 (helm-mode 1)
 
 (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
@@ -57,7 +60,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (fiplr elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
+    (git-gutter fiplr elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
