@@ -44,7 +44,12 @@
 (setq-default helm-M-x-fuzzy-match t)
 (setq-default helm-completion-in-region-fuzzy-match t)
 
-(global-set-key (kbd "C-x C-f") #'fiplr-find-file)
+
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+(global-set-key (kbd "C-x C-f") #'helm-projectile)
 
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "venv"))
                             (files ("*.jpg" "*.png" "*.zip" "*~"))))
@@ -60,7 +65,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (git-gutter fiplr elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
+    (rust-mode helm-projectile projectile git-gutter elpy helm-fuzzy-find helm-fuzzier helm nlinum fill-column-indicator))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
